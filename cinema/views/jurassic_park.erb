@@ -1,0 +1,8 @@
+<h1>Jurassic Park</h1>
+<p><% for film in @films %>
+        <% if film.title == "Jurassic Park" %>
+            Price: £<%= film.price %>
+        <% end %>
+    <% end %>
+
+</p>

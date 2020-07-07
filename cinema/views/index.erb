@@ -1,0 +1,13 @@
+<h1> Films</h1>
+    <p><% for film in @films %>
+        <ul>
+            <% if film.title == "Jurassic Park" %>
+                <li><a href="/films/jurassic_park"><%= film.title %></li>
+            <% elsif film.title == "Jaws" %>
+                <li><a href="/films/jaws"><%= film.title %></li>
+            <% elsif film.title == "Indiana Jones" %>
+                <li><a href="/films/indiana_jones"><%= film.title %></li>
+             <% end %>
+        </ul>
+        <% end %>
+    </p>
