@@ -81,4 +81,12 @@ class Film
         return Screening.map_items(result)
     end
 
+    def self.find_by_id(id)
+        sql = "SELECT * FROM films
+        WHERE id = $1"
+        values = [@id]
+        result = SqlRunner.run(sql, values)
+        return self.map_items(result)
+    end
+
 end
